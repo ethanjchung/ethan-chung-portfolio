@@ -78,12 +78,6 @@ export default function Navbar() {
                   EC
                 </span>
               </div>
-              <span
-                className="text-sm font-medium hidden sm:block transition-opacity duration-200 group-hover:opacity-70"
-                style={{ fontFamily: "'Space Grotesk', sans-serif", color: "oklch(0.75 0.01 260)" }}
-              >
-                ethanchung.dev
-              </span>
             </a>
 
             {/* Desktop Nav */}

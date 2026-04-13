@@ -7,7 +7,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { ExternalLink, Github, Star } from "lucide-react";
+import { ExternalLink, Github } from "lucide-react";
 import { PROJECTS } from "@/lib/portfolio-data";
 
 const containerVariants = {
@@ -44,7 +44,7 @@ export default function ProjectsSection() {
           className="flex items-end gap-6 mb-16"
         >
           <div>
-            <p className="section-number mb-2">01 — Projects</p>
+            <p className="section-number mb-2">Projects</p>
             <h2
               className="font-bold leading-none"
               style={{
@@ -104,12 +104,7 @@ export default function ProjectsSection() {
                     {project.title}
                   </h3>
                 </div>
-                <div className="flex items-center gap-1.5 shrink-0" style={{ color: "oklch(0.45 0.01 260)" }}>
-                  <Star size={12} />
-                  <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: "0.75rem" }}>
-                    {project.stars.toLocaleString()}
-                  </span>
-                </div>
+
               </div>
 
               {/* Description */}
@@ -183,12 +178,7 @@ export default function ProjectsSection() {
                     {project.status}
                   </span>
                 </div>
-                <div className="flex items-center gap-1" style={{ color: "oklch(0.35 0.008 260)" }}>
-                  <Star size={10} />
-                  <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: "0.65rem" }}>
-                    {project.stars}
-                  </span>
-                </div>
+
               </div>
 
               <h3

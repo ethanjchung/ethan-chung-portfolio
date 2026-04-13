@@ -10,10 +10,10 @@ import { useRef } from "react";
 const ABOUT_PORTRAIT = "https://d2xsxph8kpxj0f.cloudfront.net/310519663549822151/Ri5Fdu3R25Rjouxk7ERwah/about-portrait-b6GPFYcHXkKtp5GYWA5m3a.webp";
 
 const STATS = [
-  { value: "6+", label: "Years Experience" },
-  { value: "40+", label: "Projects Shipped" },
-  { value: "3.2k+", label: "GitHub Stars" },
-  { value: "12+", label: "OSS Contributions" },
+  { value: "2nd", label: "Year @ UBC" },
+  { value: "CS", label: "Major" },
+  { value: "4", label: "Languages" },
+  { value: "∞", label: "Still Learning" },
 ];
 
 export default function AboutSection() {
@@ -62,20 +62,20 @@ export default function AboutSection() {
           >
             <div>
               <p className="section-number mb-3">About</p>
-              <p
-                className="text-xl leading-relaxed font-light"
-                style={{ color: "oklch(0.72 0.01 260)", maxWidth: "60ch" }}
-              >
-                I'm a full-stack developer with a focus on developer experience, system reliability, and clean API design. I've shipped production systems serving millions of requests daily — and I care deeply about the craft behind every line of code.
-              </p>
-            </div>
-
             <p
-              className="text-base leading-relaxed"
-              style={{ color: "oklch(0.50 0.01 260)", maxWidth: "58ch", fontWeight: 300 }}
+              className="text-xl leading-relaxed font-light"
+              style={{ color: "oklch(0.72 0.01 260)", maxWidth: "60ch" }}
             >
-              When I'm not building, I'm writing about the engineering decisions that don't make it into documentation — the tradeoffs, the failures, and the lessons that only come from shipping.
+              I'm a second-year CS student at UBC learning to code and build things. I've been exploring Python, C++, and Java — picking up new concepts and working on small projects to solidify my understanding.
             </p>
+          </div>
+
+          <p
+            className="text-base leading-relaxed"
+            style={{ color: "oklch(0.50 0.01 260)", maxWidth: "58ch", fontWeight: 300 }}
+          >
+            This portfolio is a snapshot of my learning journey so far. I'm excited about algorithms, data structures, and eventually building real applications that solve problems.
+          </p>
 
             {/* Stats row */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 pt-4" style={{ borderTop: "1px solid oklch(1 0 0 / 6%)" }}>

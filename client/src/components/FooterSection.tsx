@@ -72,7 +72,7 @@ export default function FooterSection() {
           className="flex items-end gap-6 mb-16"
         >
           <div>
-            <p className="section-number mb-2">04 — Contact</p>
+            <p className="section-number mb-2">Contact</p>
             <h2
               className="font-bold leading-none"
               style={{
@@ -100,7 +100,7 @@ export default function FooterSection() {
               className="text-lg leading-relaxed"
               style={{ color: "oklch(0.55 0.012 260)", fontWeight: 300, maxWidth: "36ch" }}
             >
-              Open to full-time roles, freelance projects, and interesting collaborations. If you have something in mind, I'd love to hear about it.
+              Got a question, opportunity, or just want to chat? I'd love to hear from you. Drop me a line anytime.
             </p>
 
             {/* Email */}

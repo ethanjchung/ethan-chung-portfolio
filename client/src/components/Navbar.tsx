@@ -9,8 +9,6 @@ import { Menu, X } from "lucide-react";
 
 const NAV_LINKS = [
   { label: "Projects", href: "#projects" },
-  { label: "Skills", href: "#skills" },
-  { label: "Writing", href: "#blog" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -24,7 +22,7 @@ export default function Navbar() {
       setScrolled(window.scrollY > 40);
 
       // Determine active section
-      const sections = ["projects", "skills", "blog", "contact"];
+      const sections = ["projects", "contact"];
       for (const id of sections.reverse()) {
         const el = document.getElementById(id);
         if (el && window.scrollY >= el.offsetTop - 120) {

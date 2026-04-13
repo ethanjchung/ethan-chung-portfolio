@@ -10,6 +10,7 @@ import AboutSection from "@/components/AboutSection";
 import ProjectsSection from "@/components/ProjectsSection";
 import FooterSection from "@/components/FooterSection";
 import ScrollToTop from "@/components/ScrollToTop";
+import StarCursor from "@/components/StarCursor";
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
       <ProjectsSection />
       <FooterSection />
       <ScrollToTop />
+      <StarCursor />
     </div>
   );
 }

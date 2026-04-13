@@ -92,11 +92,36 @@ export default function Navbar() {
                 </button>
               ))}
             </nav>
-
             {/* CTA + Mobile Toggle */}
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-3">
               <a
-                href="https://github.com/ethanchung"
+                href="https://www.linkedin.com/in/ethanjchung"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hidden md:flex items-center gap-2 px-4 py-1.5 text-xs font-medium transition-all duration-200"
+                style={{
+                  fontFamily: "'Space Grotesk', sans-serif",
+                  border: "1px solid oklch(1 0 0 / 15%)",
+                  color: "oklch(0.75 0.01 260)",
+                  letterSpacing: "0.08em",
+                  textTransform: "uppercase",
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.borderColor = "oklch(1 0 0 / 40%)";
+                  e.currentTarget.style.color = "oklch(0.97 0.002 260)";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.borderColor = "oklch(1 0 0 / 15%)";
+                  e.currentTarget.style.color = "oklch(0.75 0.01 260)";
+                }}
+              >
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.475-2.236-1.986-2.236-1.081 0-1.722.731-2.004 1.438-.103.249-.129.597-.129.946v5.421h-3.554s.05-8.736 0-9.646h3.554v1.364c.425-.654 1.185-1.586 2.882-1.586 2.105 0 3.685 1.377 3.685 4.344v5.524zM5.337 9.433c-1.144 0-1.915-.758-1.915-1.704 0-.951.77-1.703 1.96-1.703 1.188 0 1.913.752 1.938 1.703 0 .946-.75 1.704-1.983 1.704zm1.581 11.019H3.656V9.807h3.262v10.645zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/>
+                </svg>
+                LinkedIn
+              </a>
+              <a
+                href="https://github.com/ethanjchung"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hidden md:flex items-center gap-2 px-4 py-1.5 text-xs font-medium transition-all duration-200"
@@ -123,6 +148,17 @@ export default function Navbar() {
               </a>
 
               {/* Mobile menu button */}
+              <a
+                href="https://www.linkedin.com/in/ethanjchung"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="md:hidden p-2"
+                style={{ color: "oklch(0.75 0.01 260)" }}
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.475-2.236-1.986-2.236-1.081 0-1.722.731-2.004 1.438-.103.249-.129.597-.129.946v5.421h-3.554s.05-8.736 0-9.646h3.554v1.364c.425-.654 1.185-1.586 2.882-1.586 2.105 0 3.685 1.377 3.685 4.344v5.524zM5.337 9.433c-1.144 0-1.915-.758-1.915-1.704 0-.951.77-1.703 1.96-1.703 1.188 0 1.913.752 1.938 1.703 0 .946-.75 1.704-1.983 1.704zm1.581 11.019H3.656V9.807h3.262v10.645zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/>
+                </svg>
+              </a>
               <button
                 onClick={() => setMobileOpen(!mobileOpen)}
                 className="md:hidden p-2"

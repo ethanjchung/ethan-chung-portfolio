@@ -279,11 +279,6 @@ export default function FooterSection() {
           >
             © {new Date().getFullYear()} Ethan Chung. All rights reserved.
           </span>
-          <span
-            style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: "0.7rem", color: "oklch(0.25 0.005 260)" }}
-          >
-            Built with React + TypeScript
-          </span>
         </div>
       </div>
     </footer>

@@ -11,7 +11,7 @@ const ABOUT_PORTRAIT = "https://d2xsxph8kpxj0f.cloudfront.net/310519663549822151
 
 const STATS = [
   { value: "2nd", label: "Year @ UBC" },
-  { value: "CS", label: "Major" },
+  { value: "Undeclared", label: "Major" },
   { value: "4", label: "Languages" },
   { value: "∞", label: "Still Learning" },
 ];
@@ -61,12 +61,12 @@ export default function AboutSection() {
             className="lg:col-span-8 flex flex-col gap-6"
           >
             <div>
-              <p className="section-number mb-3">About</p>
+              <p className="section-number mb-3">About me</p>
             <p
               className="text-xl leading-relaxed font-light"
               style={{ color: "oklch(0.72 0.01 260)", maxWidth: "60ch" }}
             >
-              I'm a second-year CS student at UBC learning to code and build things. I've been exploring Python, C++, and Java — picking up new concepts and working on small projects to solidify my understanding.
+              I'm a second-year student at UBC learning to code and build things. I've been exploring Python, C++, and Java — picking up new concepts and working on small projects to solidify my understanding.
             </p>
           </div>
 
@@ -74,7 +74,7 @@ export default function AboutSection() {
             className="text-base leading-relaxed"
             style={{ color: "oklch(0.50 0.01 260)", maxWidth: "58ch", fontWeight: 300 }}
           >
-            This portfolio is a snapshot of my learning journey so far. I'm excited about algorithms, data structures, and eventually building real applications that solve problems.
+            This portfolio is a small snapshot of my learning journey so far. I'm excited about learning new tech and ideas, eventually building real applications that solve problems.
           </p>
 
             {/* Stats row */}
@@ -93,7 +93,7 @@ export default function AboutSection() {
                       fontFamily: "'Space Grotesk', sans-serif",
                       fontSize: "1.75rem",
                       color: "oklch(0.97 0.002 260)",
-                      letterSpacing: "-0.02em",
+                      letterSpacing: "0.02em",
                     }}
                   >
                     {stat.value}

@@ -114,10 +114,12 @@ export default function FooterSection() {
                 onMouseEnter={(e) => {
                   e.currentTarget.style.borderColor = "oklch(1 0 0 / 30%)";
                   e.currentTarget.style.color = "oklch(0.85 0.005 260)";
+                  e.currentTarget.style.boxShadow = "0 0 12px oklch(0.97 0.002 260 / 0.3), inset 0 0 8px oklch(0.97 0.002 260 / 0.1)";
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.borderColor = "oklch(1 0 0 / 10%)";
                   e.currentTarget.style.color = "oklch(0.45 0.01 260)";
+                  e.currentTarget.style.boxShadow = "none";
                 }}
               >
                 <Mail size={15} />
@@ -148,10 +150,12 @@ export default function FooterSection() {
                   onMouseEnter={(e) => {
                     e.currentTarget.style.borderColor = "oklch(1 0 0 / 30%)";
                     e.currentTarget.style.color = "oklch(0.85 0.005 260)";
+                    e.currentTarget.style.boxShadow = "0 0 12px oklch(0.97 0.002 260 / 0.3), inset 0 0 8px oklch(0.97 0.002 260 / 0.1)";
                   }}
                   onMouseLeave={(e) => {
                     e.currentTarget.style.borderColor = "oklch(1 0 0 / 10%)";
                     e.currentTarget.style.color = "oklch(0.45 0.01 260)";
+                    e.currentTarget.style.boxShadow = "none";
                   }}
                 >
                   {social.icon}
@@ -173,10 +177,12 @@ export default function FooterSection() {
               onMouseEnter={(e) => {
                 e.currentTarget.style.borderColor = "oklch(1 0 0 / 30%)";
                 e.currentTarget.style.color = "oklch(0.97 0.002 260)";
+                e.currentTarget.style.boxShadow = "0 0 12px oklch(0.97 0.002 260 / 0.3), inset 0 0 8px oklch(0.97 0.002 260 / 0.1)";
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.borderColor = "oklch(1 0 0 / 12%)";
                 e.currentTarget.style.color = "oklch(0.65 0.01 260)";
+                e.currentTarget.style.boxShadow = "none";
               }}
             >
               <Download size={14} />
@@ -244,10 +250,16 @@ export default function FooterSection() {
                   cursor: sending ? "not-allowed" : "pointer",
                 }}
                 onMouseEnter={(e) => {
-                  if (!sending) e.currentTarget.style.background = "oklch(0.85 0.005 260)";
+                  if (!sending) {
+                    e.currentTarget.style.background = "oklch(0.85 0.005 260)";
+                    e.currentTarget.style.boxShadow = "0 0 16px oklch(0.97 0.002 260 / 0.4), inset 0 0 12px oklch(0.97 0.002 260 / 0.15)";
+                  }
                 }}
                 onMouseLeave={(e) => {
-                  if (!sending) e.currentTarget.style.background = "oklch(0.97 0.002 260)";
+                  if (!sending) {
+                    e.currentTarget.style.background = "oklch(0.97 0.002 260)";
+                    e.currentTarget.style.boxShadow = "none";
+                  }
                 }}
               >
                 <Send size={14} />

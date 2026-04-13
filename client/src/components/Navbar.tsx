@@ -109,10 +109,12 @@ export default function Navbar() {
                 onMouseEnter={(e) => {
                   e.currentTarget.style.borderColor = "oklch(1 0 0 / 40%)";
                   e.currentTarget.style.color = "oklch(0.97 0.002 260)";
+                  e.currentTarget.style.boxShadow = "0 0 12px oklch(0.97 0.002 260 / 0.4), inset 0 0 8px oklch(0.97 0.002 260 / 0.1)";
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.borderColor = "oklch(1 0 0 / 15%)";
                   e.currentTarget.style.color = "oklch(0.75 0.01 260)";
+                  e.currentTarget.style.boxShadow = "none";
                 }}
               >
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
@@ -135,10 +137,12 @@ export default function Navbar() {
                 onMouseEnter={(e) => {
                   e.currentTarget.style.borderColor = "oklch(1 0 0 / 40%)";
                   e.currentTarget.style.color = "oklch(0.97 0.002 260)";
+                  e.currentTarget.style.boxShadow = "0 0 12px oklch(0.97 0.002 260 / 0.4), inset 0 0 8px oklch(0.97 0.002 260 / 0.1)";
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.borderColor = "oklch(1 0 0 / 15%)";
                   e.currentTarget.style.color = "oklch(0.75 0.01 260)";
+                  e.currentTarget.style.boxShadow = "none";
                 }}
               >
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">

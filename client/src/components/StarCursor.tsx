@@ -1,5 +1,5 @@
 // ============================================================
-// StarCursor — Custom cursor with shining star effect
+// StarCursor — Custom cursor with shining dot effect
 // ============================================================
 
 import { useEffect, useState } from "react";
@@ -37,42 +37,36 @@ export default function StarCursor() {
         a, button, [role="button"], input, select, textarea {
           cursor: none !important;
         }
+        
+        @keyframes dotShine {
+          0%, 100% { 
+            box-shadow: 0 0 12px oklch(0.97 0.002 260), 0 0 24px oklch(0.75 0.01 260 / 0.6), inset 0 0 4px oklch(1 0 0 / 0.8);
+            opacity: 1;
+          }
+          50% { 
+            box-shadow: 0 0 8px oklch(0.97 0.002 260), 0 0 16px oklch(0.75 0.01 260 / 0.4), inset 0 0 2px oklch(1 0 0 / 0.5);
+            opacity: 0.7;
+          }
+        }
       `}</style>
 
-      {/* Star cursor */}
+      {/* Shining dot cursor */}
       {isVisible && (
-        <svg
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
+        <div
           style={{
             position: "fixed",
-            left: `${position.x - 12}px`,
-            top: `${position.y - 12}px`,
+            left: `${position.x - 6}px`,
+            top: `${position.y - 6}px`,
             pointerEvents: "none",
             zIndex: 9999,
-            filter: "drop-shadow(0 0 8px oklch(0.97 0.002 260)) drop-shadow(0 0 4px oklch(0.75 0.01 260))",
-            animation: "starShine 1.5s ease-in-out infinite",
+            width: "12px",
+            height: "12px",
+            borderRadius: "50%",
+            background: "oklch(0.97 0.002 260)",
+            boxShadow: "0 0 12px oklch(0.97 0.002 260), 0 0 24px oklch(0.75 0.01 260 / 0.6), inset 0 0 4px oklch(1 0 0 / 0.8)",
+            animation: "dotShine 1.5s ease-in-out infinite",
           }}
-        >
-          <defs>
-            <style>{`
-              @keyframes starShine {
-                0%, 100% { opacity: 1; }
-                50% { opacity: 0.6; }
-              }
-            `}</style>
-          </defs>
-          {/* Star shape */}
-          <path
-            d="M12 2L15.09 10.26H24L17.55 15.74L20.64 24L12 18.52L3.36 24L6.45 15.74L0 10.26H8.91L12 2Z"
-            fill="oklch(0.97 0.002 260)"
-          />
-          {/* Inner glow */}
-          <circle cx="12" cy="12" r="3" fill="oklch(0.97 0.002 260)" opacity="0.8" />
-        </svg>
+        />
       )}
     </>
   );

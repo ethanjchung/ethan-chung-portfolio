@@ -34,36 +34,6 @@ export const PROJECTS = [
     featured: true,
     status: "Learning",
   },
-  {
-    id: 2,
-    title: "Java Console App",
-    description: "A command-line application built in Java to practice OOP concepts and basic algorithms.",
-    tags: ["Java", "OOP"],
-    liveUrl: null,
-    repoUrl: "https://github.com/ethanjchung",
-    featured: true,
-    status: "Learning",
-  },
-  {
-    id: 3,
-    title: "C++ Data Structures",
-    description: "Implementing common data structures (linked lists, trees, graphs) in C++ as part of coursework.",
-    tags: ["C++", "Algorithms"],
-    liveUrl: null,
-    repoUrl: "https://github.com/ethanjchung",
-    featured: false,
-    status: "In Progress",
-  },
-  {
-    id: 4,
-    title: "Python Utilities",
-    description: "Small utility scripts in Python for automating tasks and learning the language.",
-    tags: ["Python", "Scripting"],
-    liveUrl: null,
-    repoUrl: "https://github.com/ethanjchung",
-    featured: false,
-    status: "Learning",
-  },
 ];
 
 export const SKILLS_CATEGORIES = [

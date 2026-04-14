@@ -44,7 +44,6 @@ export default function ProjectsSection() {
           className="flex items-end gap-6 mb-16"
         >
           <div>
-            <p className="section-number mb-2">Projects</p>
             <h2
               className="font-bold leading-none"
               style={{
@@ -54,7 +53,7 @@ export default function ProjectsSection() {
                 letterSpacing: "-0.02em",
               }}
             >
-              Selected Work
+              Projects
             </h2>
           </div>
           <div className="hairline flex-1 mb-3 hidden md:block" />

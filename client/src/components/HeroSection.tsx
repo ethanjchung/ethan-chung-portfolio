@@ -154,10 +154,15 @@ export default function HeroSection() {
             </div>
           </motion.div>
 
-          {/* Name */}
-          <motion.div variants={itemVariants}>
+          {/* Name with Profile Picture */}
+          <motion.div variants={itemVariants} className="flex items-center gap-6 mb-4">
+            <img
+              src="https://d2xsxph8kpxj0f.cloudfront.net/310519663549822151/Ri5Fdu3R25Rjouxk7ERwah/profile-pic-3HEPV5gvLdu28XpCbyQCPY.webp"
+              alt="Ethan Chung"
+              className="w-24 h-24 md:w-32 md:h-32 rounded-full flex-shrink-0 object-cover"
+            />
             <h1
-              className="font-bold leading-none tracking-tight mb-4"
+              className="font-bold leading-none tracking-tight"
               style={{
                 fontFamily: "'Space Grotesk', sans-serif",
                 fontSize: "clamp(3.5rem, 10vw, 7rem)",

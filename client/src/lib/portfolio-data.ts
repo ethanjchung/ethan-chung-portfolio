@@ -5,8 +5,8 @@
 
 export const HERO_DATA = {
   name: "Ethan Chung",
-  title: "CS Student @ UBC",
-  tagline: "Learning to build things. Currently exploring Python, C++, and Java.",
+  title: "2nd Year @ UBC",
+  tagline: "Learning to build things. Currently focusing on web development and product management.",
   location: "Vancouver, BC",
   githubUrl: "https://github.com/ethanjchung",
   linkedinUrl: "https://linkedin.com/in/ethanchung",
@@ -28,7 +28,7 @@ export const PROJECTS = [
     id: 1,
     title: "Study Tracker Application",
     description: "A Study Tracker to track how long you study each day with stats such as subject, duration, time, and location. Battle on the leaderboard against others!",
-    tags: ["Python", "Learning", "Productivity"],
+    tags: ["Java", "JSON"],
     liveUrl: null,
     repoUrl: "https://github.com/ethanjchung/study-tracker",
     featured: true,

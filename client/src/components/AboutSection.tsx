@@ -10,11 +10,14 @@ import { useRef } from "react";
 const ABOUT_PORTRAIT = "https://d2xsxph8kpxj0f.cloudfront.net/310519663549822151/Ri5Fdu3R25Rjouxk7ERwah/about-portrait-b6GPFYcHXkKtp5GYWA5m3a.webp";
 
 const STATS = [
-  { value: "2nd", label: "Year @ UBC" },
+  { value: "2nd Year", label: "@ UBC" },
   { value: "Undeclared", label: "Major" },
   { value: "4", label: "Languages" },
   { value: "∞", label: "Still Learning" },
 ];
+
+const TOP_STATS = STATS.slice(0, 2);
+const BOTTOM_STATS = STATS.slice(2);
 
 export default function AboutSection() {
   const ref = useRef(null);
@@ -62,29 +65,65 @@ export default function AboutSection() {
           >
             <div>
               <p className="section-number mb-3">About me</p>
+              <p
+                className="text-xl leading-relaxed font-light"
+                style={{ color: "oklch(0.72 0.01 260)", maxWidth: "60ch" }}
+              >
+                I'm a second-year student at UBC with strong interests in AI, web development, and Product Management. I enjoy learning new technologies and new problem-solving approaches.
+              </p>
+            </div>
+
             <p
-              className="text-xl leading-relaxed font-light"
-              style={{ color: "oklch(0.72 0.01 260)", maxWidth: "60ch" }}
+              className="text-base leading-relaxed"
+              style={{ color: "oklch(0.50 0.01 260)", maxWidth: "58ch", fontWeight: 300 }}
             >
-              I'm a second-year student at UBC learning to code and build things. I've been exploring Python, C++, and Java — picking up new concepts and working on small projects to solidify my understanding.
+              This portfolio is a small snapshot of my learning journey so far. I'm excited about learning new tech and ideas, eventually building real applications that solve problems.
             </p>
-          </div>
 
-          <p
-            className="text-base leading-relaxed"
-            style={{ color: "oklch(0.50 0.01 260)", maxWidth: "58ch", fontWeight: 300 }}
-          >
-            This portfolio is a small snapshot of my learning journey so far. I'm excited about learning new tech and ideas, eventually building real applications that solve problems.
-          </p>
-
-            {/* Stats row */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 pt-4" style={{ borderTop: "1px solid oklch(1 0 0 / 6%)" }}>
-              {STATS.map((stat, idx) => (
+            {/* Stats row - Top row (2nd Year @ UBC, Undeclared) */}
+            <div className="grid grid-cols-2 gap-6 pt-4" style={{ borderTop: "1px solid oklch(1 0 0 / 6%)" }}>
+              {TOP_STATS.map((stat, idx) => (
                 <motion.div
                   key={stat.label}
                   initial={{ opacity: 0, y: 10 }}
                   animate={isInView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.4, delay: 0.3 + idx * 0.07 }}
+                  className="flex flex-col gap-1"
+                >
+                  <span
+                    className="font-bold"
+                    style={{
+                      fontFamily: "'Space Grotesk', sans-serif",
+                      fontSize: "1.75rem",
+                      color: "oklch(0.97 0.002 260)",
+                      letterSpacing: "0.02em",
+                    }}
+                  >
+                    {stat.value}
+                  </span>
+                  <span
+                    style={{
+                      fontFamily: "'JetBrains Mono', monospace",
+                      fontSize: "0.65rem",
+                      color: "oklch(0.40 0.008 260)",
+                      letterSpacing: "0.08em",
+                      textTransform: "uppercase",
+                    }}
+                  >
+                    {stat.label}
+                  </span>
+                </motion.div>
+              ))}
+            </div>
+
+            {/* Stats row - Bottom row (Languages, Still Learning) */}
+            <div className="grid grid-cols-2 gap-6">
+              {BOTTOM_STATS.map((stat, idx) => (
+                <motion.div
+                  key={stat.label}
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={isInView ? { opacity: 1, y: 0 } : {}}
+                  transition={{ duration: 0.4, delay: 0.3 + (idx + 2) * 0.07 }}
                   className="flex flex-col gap-1"
                 >
                   <span

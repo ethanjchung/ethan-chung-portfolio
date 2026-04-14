@@ -10,13 +10,24 @@ import { useRef } from "react";
 import { Download, Github, Linkedin, Mail, Send, Twitter } from "lucide-react";
 import { toast } from "sonner";
 import { HERO_DATA } from "@/lib/portfolio-data";
+import { trpc } from "@/lib/trpc";
 
 export default function FooterSection() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-80px" });
 
   const [form, setForm] = useState({ name: "", email: "", message: "" });
-  const [sending, setSending] = useState(false);
+
+
+  const sendMessage = trpc.contact.sendMessage.useMutation({
+    onSuccess: () => {
+      toast.success("Message sent! I'll get back to you soon.");
+      setForm({ name: "", email: "", message: "" });
+    },
+    onError: (error: any) => {
+      toast.error(error?.message || "Failed to send message. Please try again.");
+    },
+  });
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -24,12 +35,7 @@ export default function FooterSection() {
       toast.error("Please fill in all fields.");
       return;
     }
-    setSending(true);
-    // Simulate submission
-    await new Promise((r) => setTimeout(r, 1200));
-    setSending(false);
-    toast.success("Message sent! I'll get back to you soon.");
-    setForm({ name: "", email: "", message: "" });
+    sendMessage.mutate(form);
   };
 
   const inputStyle = {
@@ -239,31 +245,31 @@ export default function FooterSection() {
 
               <button
                 type="submit"
-                disabled={sending}
+                disabled={sendMessage.isPending}
                 className="flex items-center justify-center gap-2.5 py-3 px-6 text-sm font-medium transition-all duration-200 self-start"
                 style={{
                   fontFamily: "'Space Grotesk', sans-serif",
-                  background: sending ? "oklch(0.75 0.01 260)" : "oklch(0.97 0.002 260)",
+                  background: sendMessage.isPending ? "oklch(0.75 0.01 260)" : "oklch(0.97 0.002 260)",
                   color: "oklch(0.08 0.005 260)",
                   letterSpacing: "0.05em",
-                  opacity: sending ? 0.7 : 1,
-                  cursor: sending ? "not-allowed" : "pointer",
+                  opacity: sendMessage.isPending ? 0.7 : 1,
+                  cursor: sendMessage.isPending ? "not-allowed" : "pointer",
                 }}
                 onMouseEnter={(e) => {
-                  if (!sending) {
+                  if (!sendMessage.isPending) {
                     e.currentTarget.style.background = "oklch(0.85 0.005 260)";
                     e.currentTarget.style.boxShadow = "0 0 16px oklch(0.97 0.002 260 / 0.4), inset 0 0 12px oklch(0.97 0.002 260 / 0.15)";
                   }
                 }}
                 onMouseLeave={(e) => {
-                  if (!sending) {
+                  if (!sendMessage.isPending) {
                     e.currentTarget.style.background = "oklch(0.97 0.002 260)";
                     e.currentTarget.style.boxShadow = "none";
                   }
                 }}
               >
                 <Send size={14} />
-                {sending ? "Sending..." : "Send Message"}
+                {sendMessage.isPending ? "Sending..." : "Send Message"}
               </button>
             </form>
           </motion.div>

@@ -26,11 +26,11 @@ export const TECH_STACK = [
 export const PROJECTS = [
   {
     id: 1,
-    title: "Simple Web Scraper",
-    description: "A Python project that scrapes data from websites and exports to JSON. Built to learn HTTP requests and data parsing.",
-    tags: ["Python", "JSON", "Learning"],
+    title: "Study Tracker Application",
+    description: "A Study Tracker to track how long you study each day with stats such as subject, duration, time, and location. Battle on the leaderboard against others!",
+    tags: ["Python", "Learning", "Productivity"],
     liveUrl: null,
-    repoUrl: "https://github.com/ethanjchung",
+    repoUrl: "https://github.com/ethanjchung/study-tracker",
     featured: true,
     status: "Learning",
   },

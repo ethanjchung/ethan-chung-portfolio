@@ -228,7 +228,7 @@ export default function FooterSection() {
                 <label style={labelStyle}>Message</label>
                 <textarea
                   rows={5}
-                  placeholder="Tell me about your project or opportunity..."
+                  placeholder="Tell me anything..."
                   value={form.message}
                   onChange={(e) => setForm({ ...form, message: e.target.value })}
                   style={{ ...inputStyle, resize: "vertical", minHeight: "120px" }}

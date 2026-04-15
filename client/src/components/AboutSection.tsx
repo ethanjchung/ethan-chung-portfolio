@@ -7,7 +7,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
-const ABOUT_PORTRAIT = "https://d2xsxph8kpxj0f.cloudfront.net/310519663549822151/Ri5Fdu3R25Rjouxk7ERwah/about-portrait-b6GPFYcHXkKtp5GYWA5m3a.webp";
+const ABOUT_PORTRAIT = "/about-portrait.png";
 
 const STATS = [
   { value: "2nd Year", label: "@ UBC" },

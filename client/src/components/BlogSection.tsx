@@ -10,7 +10,7 @@ import { useRef } from "react";
 import { ArrowUpRight, Clock } from "lucide-react";
 import { BLOG_POSTS } from "@/lib/portfolio-data";
 
-const BLOG_COVER = "https://d2xsxph8kpxj0f.cloudfront.net/310519663549822151/Ri5Fdu3R25Rjouxk7ERwah/blog-cover-HBuBmeJibMNVgZMBmFbgs3.webp";
+const BLOG_COVER = "/blog-cover.png";
 
 const formatDate = (dateStr: string) => {
   const d = new Date(dateStr);

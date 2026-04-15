@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 import { ArrowDown, Github, MapPin } from "lucide-react";
 import { HERO_DATA, TECH_STACK } from "@/lib/portfolio-data";
 
-const HERO_BG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663549822151/Ri5Fdu3R25Rjouxk7ERwah/hero-bg-C22XkWVVAeeaf4HcTXbJ8f.webp";
+const HERO_BG = "/hero-bg.png";
 
 // SVG icons for tech stack
 const TechIcon = ({ icon, name }: { icon: string; name: string }) => {
